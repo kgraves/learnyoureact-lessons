@@ -7,11 +7,11 @@ app.set('views', __dirname + '/views');
 app.engine('jsx', require('express-react-views').createEngine({ transformViews: false }));
 
 require('babel/register')({
-    ignore: false
+		ignore: false
 });
 
 app.use('/', function(req, res) {
-  res.render('index', '');
+	res.render('index', '');
 });
 
 app.listen(app.get('port'), function() {});
